@@ -1,0 +1,27 @@
+{
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "Full-Medium"
+   },
+
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "scripts/content-script.js" ],
+      "matches": [ "https://medium.freecodecamp.org/*" ],
+      "run_at": "document_end"
+   } ],
+   
+   "description": "A chrome extension that gives you 100 reading space when reading on medium!",
+   "icons": {
+      "128": "img/icon-128.png",
+      "16": "img/icon-16.png"
+   },
+   "manifest_version": 2,
+   "name": "Full-Medium",
+   "permissions": [ "activeTab", "tabs", "https://medium.freecodecamp.org/*" ],
+   "short_name": "Full-Medium",
+   "version": "1.0.0"
+}
